@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>AC</title>
+	<link rel="stylesheet" href="./main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    
+   <body>
+    <div class="row">
+        <div class="teamCorner">
+            <h2> The Team's Perspective </h2>
+            <div id="pic2">
+                <img id="team" src="https://dl.dropboxusercontent.com/u/10845101/images/image2.jpeg">
+                <p class="teamquote"> "Race, gender, religion,sexuality,we are all people and thats's it.<br> We're all people. We're all equal." -Connor Franta-  </p>
+            </div>
+        </div>
+        
+        <div class="formCorner">
+    
+            <div class="section">
+                  <h1>What is your name?
+                    <input id="name">
+                  </h1>
+                  <div>
+                    <button id="submit-name">Enter</button>
+                  </div>
+            </div>
+            <p id="greeting">Hey </p>
+            <div class="section2">
+              <h2> Where are you from?
+                  <input id="country">
+              </h2>
+              <button id="name-submit">Enter</button>
+              <p id="place"> Really?Cool!</p>
+              </div>
+          <div class="section3">
+              <h3> Your opinion on equality?
+                  <input id="idea">
+              </h3>
+              <button id="submit">Enter</button>
+              <p id="cool"></p>
+              <p>Thanks for you feedback!</p>
+            </div>
+        </div>
+    </div>
+      
+       <img class="people" src="https://thumbs.dreamstime.com/z/people-around-world-24527810.jpg">
+        <img class="flags" src="http://1.bp.blogspot.com/-0M7okS3STgo/VGogWDMdE0I/AAAAAAAAFes/j5nTQ6prCBQ/s1600/Flags%2BGlobe.png"> 
+      
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="row">
+	   <div>
+            <a class="twitter-timeline" href="https://twitter.com/hashtag/Equality" data-widget-id="810169492898803712">#Equality Tweets</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+           <img class="d" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Whitehead-link-alternative-sexuality-symbol.svg/2000px-Whitehead-link-alternative-sexuality-symbol.svg.png">
+        </div>
+        <div>
+            <button id="Omar" value="Omar's View">Omar's View</button>
+            <img class="a" id="omarflag" src="http://kiskeya.life/wp-content/uploads/2016/08/flag.jpg">
+            <p id="omarqoute" class="quotefont"></p>
+            <button id="Cincere" value="Cincere's View">Cincere's View</button>
+            <p> </p>
+            <img class="a" id="cincereflag" src="http://www.50states.com/flag/image/nunst028.gif">
+            <p id="cincereqoute"class="quotefont"></p>
+            <button id="David" value="David's View">David's View</button>
+            <img class="a" id="davidflag" src="http://www.flags.net/images/largeflags/POLA0002.GIF">
+            <p id="davidqoute"class="quotefont"></p>
+            <button id="Hennessey" value="Hennessey's View">Henneseys View</button>
+            <img class="a" id="hennesseyflag" src="https://image.winudf.com/754/014321bfc1fb86f2/screen-3.jpg">
+            <p id="hennesseyqoute" class="quotefont"></p>
+            <button id="Diamond" value="Diamond's View">Diamond's View</button>
+            <img class="a" id="diamondflag" src="https://i.ytimg.com/vi/trm-rFiSP28/maxresdefault.jpg">
+            <p id="diamondqoute" class="quotefont"></p>
+            
+            <button id="Kayshawna" value="Kayshawna's View">Kayshawna's View</button>
+            <img class="a" id="kayshawnaflag" src="http://media.gettyimages.com/videos/american-flag-high-detail-looping-video-id465375773?s=640x640">
+            <p id="kayshawnaqoute" class="quotefont"></p>
+            <button id="Marixza" value="Marixza's View">Marixza's View</button>
+            <img class="a"  id="Marixzaflag" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Mexican_Presidential_Standard.svg">
+            <p id="marixzaqoute" class="quotefont"></p>
+          
+            <button id="Foti" value="Foti's View">Foti's View</button>
+            <img class="a" id="fotiFlag" src="http://wallpapercave.com/wp/c7XHE5M.jpg">
+            <p id="fotiqoute" class="quotefont"></p>
+        </div>
+    </div>
+        
+	<script>
+    /* global $ */
+        $(document).ready(function() {
+            $(".section2").hide();
+            $("#place").hide();
+            $(".section3").hide();
+            
+            $(".teamCorner").css("opacity", 0);
+        })
+                
+        $("#submit-name").click(function(){
+           $("#greeting").append($("#name").val());
+           $(".section2").show();
+        });
+        $("#name-submit").click(function(){
+           $("#place").prepend($("#country").val());
+           $("#place").show();
+           $(".section3").show();
+           
+           });
+           $("#submit").click(function(){
+           $("#cool").prepend($("#idea").val());
+           
+           });
+           
+           $(".teamCorner").mouseenter(function() {
+               $(".teamCorner").css("opacity", 1);
+           });
+           $(".teamCorner").mouseleave(function() {
+               $(".teamCorner").css("opacity", .1);
+           });
+   
+   
+   
+   var fotiflagshow=2;
+$(document).ready(function(){
+        $("#fotiFlag").hide();
+         $("#Marixzaflag").hide();
+         $("#kayshawnaflag").hide();
+          $("#diamondflag").hide();
+          $("#hennesseyflag").hide();
+          $("#davidflag").hide();
+          $("#cincereflag").hide();
+          $("#omarflag").hide();
+});
+$("#Foti").click(function(){
+    if(fotiflagshow ===1) 
+    {  $("#fotiFlag").hide();
+       fotiflagshow=2;
+       $("#fotiqoute").html("");
+        }
+   else if(fotiflagshow ===2) 
+    {  $("#fotiFlag").show();
+         fotiflagshow=1;
+         $("#fotiqoute").html("My view is that right now equality is better but still not at where its suppose to be.I believe we have a long way to go but hopefully we will get there. I believe everyone should have equality.");
+        }
+});
+var Marixzaflagshow=2;
+$("#Marixza").click(function(){
+    if(Marixzaflagshow ===1) 
+    {  $("#Marixzaflag").hide();
+       Marixzaflagshow=2;
+       $("#marixzaqoute").html("");
+        }
+   else if(Marixzaflagshow ===2) 
+    {  $("#Marixzaflag").show();
+         Marixzaflagshow=1;
+         $("#marixzaqoute").html("My view on the community would be suprised because there is a lot of racism and also a lot of discriminating. There would be people who would insult other people for their race, gender or social status. I would say that people should ignore other people and keep moving on with positive vibes.");
+        }
+});
+var kayshawnaflagshow=2;
+$("#Kayshawna").click(function(){
+    if(kayshawnaflagshow ===1) 
+    {  $("#kayshawnaflag").hide();
+       kayshawnaflagshow=2;
+       $("#kayshawnaqoute").html("");
+        }
+   else if(kayshawnaflagshow ===2) 
+    {  $("#kayshawnaflag").show();
+         kayshawnaflagshow=1;
+         $("#kayshawnaqoute").html("My views on the community is confusing. There are so many innocent people that are getting hurt from there race or sexuality. People are judging other people for being free when we are in America. We are allowed freedom of speech. There are alot of rich people abusing there power to get away with crime.");
+        }
+});
+var diamondflagshow=2;
+$("#Diamond").click(function(){
+    if(diamondflagshow ===1) 
+    {  $("#diamondflag").hide();
+       diamondflagshow=2;
+       $("#diamondqoute").html("");
+        }
+   else if(diamondflagshow ===2) 
+    {  $("#diamondflag").show();
+         diamondflagshow=1;
+         $("#diamondqoute").html("My view on the community is all over the place. The community can be looked at in a bad way and a good way. My community is looked down on for poverty and violence. When poverty and violence is the result of us being restrained from help we're not receiving. The community is looked up to when our athletes,doctors,lawyers,rappers,actors, and actresses are those coming up.People don't acknowledge our struggle until we overcome it.");
+        }
+});
+var hennesseyflagshow=2;
+$("#Hennessey").click(function(){
+    if(hennesseyflagshow ===1) 
+    {  $("#hennesseyflag").hide();
+       hennesseyflagshow=2;   
+       $("#hennesseyqoute").html("");
+        }
+   else if(hennesseyflagshow ===2) 
+    {  $("#hennesseyflag").show();
+         hennesseyflagshow=1;
+         $("#hennesseyqoute").html(" My view on the community is confusing.We can never live in peace with each other.");
+        }
+});
+var davidflagshow=2;
+$("#David").click(function(){
+    if(davidflagshow ===1) 
+    {  $("#davidflag").hide();
+       davidflagshow=2; 
+       $("#davidqoute").html("");
+        }
+   else if(davidflagshow ===2) 
+    {  $("#davidflag").show();
+         davidflagshow=1;
+         $("#davidqoute").html("My view on equality is that its critical for a successful society.We should work towards improving it in all areas of life.");
+        }
+});
+var cincereflagshow=2;
+$("#Cincere").click(function(){
+    if(cincereflagshow ===1) 
+    {  $("#cincereflag").hide();
+       cincereflagshow=2;
+       $("#cincereqoute").html("");
+        }
+   else if(cincereflagshow ===2) 
+    {  $("#cincereflag").show();
+         cincereflagshow=1;
+         $("#cincereqoute").html("My views on the communnity are messed up. There is alot of violence and evil. From movements like Black lives matter,Anti bullying and the LGBTQ social movement spreading positvely throughout the world. We have all the power to create change. We developed a interactive webpage where you can freely express yourself and share your positive thoughts with others all over the world.");
+        }
+});
+var omarflagshow=2;
+$("#Omar").click(function(){
+    if(omarflagshow ===1) 
+    {  $("#omarflag").hide();
+       omarflagshow=2;
+       $("#omarqoute").html("");
+        }
+   else if(omarflagshow ===2) 
+    {  $("#omarflag").show();
+         omarflagshow=1;
+         $("#omarqoute").html("My view on equality would sad and dissapointed in society.I would never have imagined that society would judge a person based on their color or their race.I thought that society would judge a person by the type of the person they are,but once again the world has decieved me. On my part i try to bring positive vibes to the community and happy ones to try to unite everyone but the problem is no one can change how a person feels except the person themselves. ");
+        }
+});
+
+    </script>
+</body>
+</html>
